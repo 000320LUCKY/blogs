@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head th:replace="admin/_fragment :: head(~{::title})">
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客管理</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../../static/css/me.css">
+</head>
+
+<body>
+    <!-- 导航 -->
+    <nav th:replace="admin/_fragment :: menu(0)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+        <div class="ui container">
+            <div class="ui inverted secondary stackable menu">
+                <h2 class="ui teal header item">管理后台</h2>
+                <a href="#" class="m-item item m-mobile-hide"><i class= "mini home icon"></i>博客</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class= "mini idea icon"></i>分类</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class= "mini tags icon"></i>标签</a>
+                <!-- 用户 -->
+                <div class="right m-item m-mobile-hide menu ">
+                    <div class="ui dropdown item ">
+                        <div class="text">
+                            <img src="https://picsum.photos/seed/picsum/100/100?image=1005" alt="" class="ui avatar image"> 李曜辰
+                        </div>
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <a href="#" class="item">注销</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+            <i class="sidebar icon"></i>
+
+        </a>
+    </nav>
+
+
+
+    <!-- 中间内容 -->
+    <div class="m-padded-tb-large ">
+        <div class="ui container">
+            <div class="ui success large message">
+                <h3>Hi,</h3>
+                <p>xxx，欢迎登录！</p>
+            </div>
+            <img src="https://picsum.photos/seed/picsum/1400/1000?image=1005" class="ui rounded bordered fluid image">
+        </div>
+    </div>
+
+    <!--底部footer  -->
+    <footer th:replace="admin/_fragment :: footer" class="ui inverted vertical segment m-padded-tb-massive">
+        <div class="ui center aligned container">
+            <div class="ui inverted divided mobile reversed stackable grid">
+                <div class="three wide column">
+                    <div class="ui inverted link list">
+                        <div class="item">
+                            <img src="../../static/images/exported_qrcode_image_600.png" class="ui rounded image" alt="" style="width: 110px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-spaced">最新博客</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">用户故事</a>
+                        <a href="#" class="item">用户故事</a>
+                        <a href="#" class="item">用户故事</a>
+                        <a href="#" class="item">用户故事</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-spaced">联系我</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">用户故事</a>
+                        <a href="#" class="item">用户故事</a>
+                        <a href="#" class="item">用户故事</a>
+                        <a href="#" class="item">用户故事</a>
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <h4 class="ui inverted header m-text-spaced">Blog</h4>
+                    <div class="ui inverted link list">
+                        <p class=" m-text-spaced m-opcity-mini">这是我的个人博客、会分享关于编程、写作、思考相关方面的内容，希望可以给来到这的人有所帮助...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ui inverted section divider"></div>
+            <p class=" m-text-spaced m-opcity-tiny">Copyright l j josj oi</p>
+        </div>
+    </footer>
+
+    <!--/*/<th:block th:replace="_fragment :: script">/*/-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <!--/*/</th:block>/*/-->
+    <script>
+        $('.menu.toggle').click(function() {
+            $('.m-item').toggleClass('m-mobile-hide');
+        });
+        $('.ui.dropdown').dropdown({
+            on: 'hover'
+        });
+
+    </script>
+
+</body>
+
+</html>
